@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Canungra Estate - Luxurious Farm Experience</title>
+    <style>
+        :root {
+            /* Canungra Estate Color Palette */
+            --primary-green: #2C5530; /* Deep Forest Green */
+            --primary-light: #4A7A4F; 
+            --accent-gold: #C5A065;   /* Estate Gold */
+            --bg-cream: #F9F9F5;      /* Cream Background */
+            --text-dark: #1A1A1A;     /* Primary Text (English) */
+            --text-gray: #666666;     /* Secondary Text (Chinese) */
+            --white: #FFFFFF;
+            
+            /* Spacing */
+            --container-padding: 20px;
+            --section-spacing: 30px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-green);
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 1.5rem;
+            border-bottom: 6px solid var(--accent-gold);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-family: serif; /* Elegant serif for English title */
+        }
+
+        header .subtitle-en {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            margin-top: 10px;
+            display: block;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header .subtitle-zh {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            display: block;
+            color: rgba(255,255,255,0.7);
+            font-weight: normal;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            transform: translateY(-40px);
+        }
+
+        /* Sections */
+        .content-section {
+            background: var(--white);
+            margin-bottom: var(--section-spacing);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            border-top: 4px solid var(--accent-gold);
+        }
+
+        /* Headings */
+        h2 {
+            color: var(--primary-green);
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-family: serif;
+        }
+
+        .h2-sub {
+            display: block;
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 2rem;
+            font-weight: normal;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            color: var(--accent-gold);
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            font-family: serif;
+        }
+
+        /* Dual Language Typography Logic */
+        .text-block {
+            margin-bottom: 1.5rem;
+        }
+
+        /* English (Primary) */
+        .lang-en {
+            color: var(--text-dark);
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 0.4rem;
+        }
+
+        /* Chinese (Secondary) */
+        .lang-zh {
+            color: var(--text-gray);
+            display: block;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* Lists */
+        ul { list-style: none; padding: 0; }
+
+        li {
+            margin-bottom: 1.5rem;
+            padding-left: 20px;
+            border-left: 2px solid var(--accent-gold); /* Elegant line instead of bullet */
+        }
+
+        strong { color: var(--primary-green); font-weight: 600; }
+
+        /* Grid for Activities */
+        .activity-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+        
+        @media (min-width: 768px) {
+            .activity-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        .activity-item {
+            background: #FAFAFA;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .activity-item h4 {
+            margin: 0 0 10px 0;
+            color: var(--primary-green);
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 4rem 1rem;
+            background-color: var(--primary-green);
+            color: rgba(255,255,255,0.6);
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        footer a { color: var(--white); text-decoration: none; opacity: 0.8; }
+        footer a:hover { opacity: 1; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .content-section { padding: 1.5rem; }
+            h2 { font-size: 1.6rem; }
+            .lang-en { font-size: 1.05rem; }
+            .lang-zh { font-size: 0.9rem; }
+            header { padding: 3.5rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Canungra Estate</h1>
+    <span class="subtitle-en">Luxurious Farm & Winery Experience</span>
+    <span class="subtitle-zh">Scenic Rim 頂級豪華農莊體驗</span>
+</header>
+
+<div class="container">
+
+    <!-- About Section -->
+    <section class="content-section">
+        <h2>About Canungra Estate</h2>
+        <span class="h2-sub">關於 Canungra Estate</span>
+        
+        <div class="text-block">
+            <span class="lang-en">Canungra Estate is a premier luxurious farm estate located in Queensland's picturesque Scenic Rim, just a 1-hour drive from the Gold Coast and Brisbane.</span>
+            <span class="lang-zh">Canungra Estate 是一座結合奢華與自然的頂級農場莊園，坐落於昆士蘭風景優美的 Scenic Rim，距離黃金海岸與布里斯本僅需 1 小時車程。</span>
+        </div>
+        
+        <div class="text-block">
+            <span class="lang-en">Offering a unique Australian farm life experience, the estate perfectly blends modern comfortable accommodation with tranquil countryside scenery, making it the ideal getaway to escape the city hustle and immerse yourself in nature.</span>
+            <span class="lang-zh">這裡提供獨特的澳洲農場生活體驗，將現代化的舒適住宿與寧靜的鄉村風光完美融合，是逃離城市喧囂、沉浸於大自然的理想度假勝地。</span>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="content-section">
+        <h2>Why Choose Us?</h2>
+        <span class="h2-sub">為什麼選擇我們？</span>
+
+        <h3>🎯 Unique Features</h3>
+        
+        <ul>
+            <li>
+                <span class="lang-en"><strong>Luxurious Accommodation</strong> – Designed for discerning travelers, offering private and elegant living spaces equipped with top-tier amenities.</span>
+                <span class="lang-zh"><strong>豪華住宿</strong> – 專為追求品質的旅客設計，提供私密且高雅的居住空間，配備頂級設施。</span>
+            </li>
+            <li>
+                <span class="lang-en"><strong>Farm Life Experience</strong> – Get close to nature, experience authentic Australian farm operations, and interact with gentle animals.</span>
+                <span class="lang-zh"><strong>農場生活體驗</strong> – 親近自然，體驗真實的澳洲農場運作，與溫馴的動物近距離互動。</span>
+            </li>
+            <li>
+                <span class="lang-en"><strong>Scenic Weddings & Events</strong> – With magnificent valley views and expansive lawns, it is the perfect venue for dream weddings and private events.</span>
+                <span class="lang-zh"><strong>景觀婚禮與活動</strong> – 擁有壯麗的山谷景觀與廣闊草地，是舉辦夢幻婚禮與私人活動的絕佳場地。</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="content-section">
+        <h2>Activities & Experiences</h2>
+        <span class="h2-sub">豐富的農場活動</span>
+
+        <h3>🐎 Interactive Farm Activities</h3>
+        <div class="activity-grid">
+            <div class="activity-item">
+                <h4>Sheep Shearing Show</h4>
+                <span class="lang-en">Watch traditional Australian sheep shearing demonstrations, typically held at 10:30 AM (please check schedule).</span>
+                <span class="lang-zh"><strong>剪羊毛秀</strong> – 定期舉辦的澳洲傳統剪羊毛示範，見證職人精湛技藝（通常於上午 10:30 舉行）。</span>
+            </div>
+            <div class="activity-item">
+                <h4>Animal Feeding</h4>
+                <span class="lang-en">Hand-feed horses, sheep, and other farm animals. A heartwarming experience for the whole family.</span>
+                <span class="lang-zh"><strong>動物餵食</strong> – 親手餵食馬匹、綿羊與小動物，適合全家大小的溫馨互動時光。</span>
+            </div>
+        </div>
+
+        <h3>🌊 Nature & Wellness</h3>
+        <div class="activity-grid">
+            <div class="activity-item">
+                <h4>Creek Picnics</h4>
+                <span class="lang-en">Enjoy a peaceful afternoon by the private Canungra Creek, listening to the water and spotting local wildlife.</span>
+                <span class="lang-zh"><strong>溪畔野餐</strong> – 在私人的 Canungra Creek 溪畔享受寧靜午後，聆聽流水聲，偶爾還能觀察到野生動物。</span>
+            </div>
+            <div class="activity-item">
+                <h4>Morning Yoga</h4>
+                <span class="lang-en">Stretch with the sunrise on the outdoor terrace, absorbing the pure valley air (private sessions available).</span>
+                <span class="lang-zh"><strong>晨間瑜珈</strong> – 在寬敞的戶外露台隨著日出伸展肢體，吸收山谷間的芬多精。</span>
+            </div>
+        </div>
+
+        <h3>🎈 Local Adventures</h3>
+        <ul>
+            <li>
+                <span class="lang-en"><strong>Hot Air Ballooning</strong> – Experience breathtaking sunrise views over the Scenic Rim hinterland from a hot air balloon.</span>
+                <span class="lang-zh"><strong>熱氣球飛行</strong> – Canungra 是澳洲熱氣球重鎮，清晨升空俯瞰壯麗的 Scenic Rim 雲海。</span>
+            </li>
+            <li>
+                <span class="lang-en"><strong>Alpaca Walking</strong> – Take an alpaca for a walk through the vineyards at the nearby O'Reilly's Canungra Valley Vineyards.</span>
+                <span class="lang-zh"><strong>羊駝散步</strong> – 鄰近的 O'Reilly's 葡萄園提供牽著羊駝漫步葡萄園的獨特體驗。</span>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Location Section -->
+    <section class="content-section">
+        <h2>Location & Surroundings</h2>
+        <span class="h2-sub">地理位置與周邊</span>
+        
+        <div class="text-block">
+            <span class="lang-en">Located in the heart of the Scenic Rim, Canungra Estate is surrounded by world-class natural attractions and wineries.</span>
+            <span class="lang-zh">Canungra Estate 位於 Scenic Rim 的心臟地帶，周邊環繞著世界級的自然景點與酒莊。</span>
+        </div>
+
+        <ul>
+            <li>
+                <span class="lang-en"><strong>O'Reilly's Canungra Valley Vineyards</strong> – Famous vineyard offering fine dining and alpaca walking.</span>
+                <span class="lang-zh">著名的葡萄園與酒莊，提供精緻餐飲。</span>
+            </li>
+            <li>
+                <span class="lang-en"><strong>Lamington National Park</strong> – World Heritage-listed national park featuring waterfalls and rainforest trails.</span>
+                <span class="lang-zh">世界遺產國家公園，擁有壯觀的瀑布與雨林步道。</span>
+            </li>
+        </ul>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Canungra Estate. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
